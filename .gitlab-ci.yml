@@ -1,0 +1,11 @@
+default:
+  before_script:
+    - rustc --version
+    - pwd
+
+stages:
+  - build
+
+include:
+  - local: 'learning/.gitlab-ci.yml'
+

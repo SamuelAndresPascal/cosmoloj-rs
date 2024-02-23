@@ -1,0 +1,7 @@
+build:learning:
+  stage: build
+  script:
+    - cd learning
+    - rustc hello.rs
+    - ./hello
+
