@@ -1,0 +1,6 @@
+build:unit_simple:
+  stage: build
+  script:
+    - cd unit_simple
+    - rustc --crate-type=lib unit_simple.rs
+

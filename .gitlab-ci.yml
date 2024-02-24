@@ -8,4 +8,5 @@ stages:
 
 include:
   - local: 'learning/.gitlab-ci.yml'
+  - local: 'unit_simple/.gitlab-ci.yml'
 
