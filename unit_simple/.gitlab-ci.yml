@@ -2,5 +2,5 @@ build:unit_simple:
   stage: build
   script:
     - cd unit_simple
-    - rustc --crate-type=lib src/unit_simple.rs
+    - cargo build
 
