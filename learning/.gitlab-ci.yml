@@ -10,5 +10,5 @@ build:learning:hello_world:
   script:
     - cd learning/hello_world
     - cargo build
-    - ./target/debug/hello_world
+    - cargo run
 
