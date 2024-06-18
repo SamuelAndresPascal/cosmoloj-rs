@@ -1,6 +1,8 @@
 default:
   before_script:
+    - rustfmt --version
     - rustc --version
+    - cargo --version
     - pwd
 
 stages:
