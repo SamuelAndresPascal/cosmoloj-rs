@@ -1,7 +1,14 @@
-build:learning:
+build:learning:hello:
   stage: build
   script:
-    - cd learning
+    - cd learning/hello
     - rustc hello.rs
     - ./hello
+
+build:learning:hello_world:
+  stage: build
+  script:
+    - cd learning/hello_world
+    - cargo build
+    - ./target/debug/hello_world
 

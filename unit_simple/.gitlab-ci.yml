@@ -4,3 +4,9 @@ build:unit_simple:
     - cd unit_simple
     - cargo build
 
+build_release:unit_simple:
+  stage: build
+  script:
+    - cd unit_simple
+    - cargo build --release
+
