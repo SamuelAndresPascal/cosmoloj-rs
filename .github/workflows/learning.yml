@@ -1,0 +1,31 @@
+name: learning
+run-name: ${{ github.actor }}
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build__hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout repository"
+        uses: actions/checkout@master
+      - name: "build learning hello"
+        working-directory: ./learning/hello
+        run: rustc hello.rs
+      - name: "run learning hello"
+        working-directory: ./learning/hello
+        run: ./hello
+  build__hello_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "checkout repository"
+        uses: actions/checkout@master
+      - name: "build learning hello_world"
+        working-directory: ./learning/hello_world
+        run: cargo build
+      - name: "run learning hello_world"
+        working-directory: ./learning/hello_world
+        run: cargo run
