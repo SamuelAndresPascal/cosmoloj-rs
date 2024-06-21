@@ -1,12 +1,17 @@
 name: GitHub Actions
 run-name: ${{ github.actor }} is running out GitHub Actions
-on: [push]
+
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   build__unit_simple:
     runs-on: ubuntu-latest
     steps:
-      - name: "build unit_simple"
+      - name: "checkout unit_simple"
         uses: actions/checkout@master
+      - name: "build unit_simple"
         working-directory: ./unit_simple
         run: cargo build
