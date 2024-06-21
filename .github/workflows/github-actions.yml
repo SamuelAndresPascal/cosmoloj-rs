@@ -6,6 +6,7 @@ jobs:
   build__unit_simple:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - run: cd unit_simple
-      - run: cargo build
+      - name: "build unit_simple"
+        uses: actions/checkout@master
+        working-directory: ./unit_simple
+        run: cargo build
