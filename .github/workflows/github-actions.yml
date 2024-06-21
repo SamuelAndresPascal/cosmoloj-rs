@@ -1,0 +1,10 @@
+name: GitHub Actions
+run-name: ${{ github.actor }} is running out GitHub Actions
+on: [push]
+
+jobs:
+  build:unit_simple:
+    runs-on: ubuntu-latest
+    steps:
+      - run: cd unit_simple
+      - run: cargo build
